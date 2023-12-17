@@ -8,7 +8,7 @@ const viewsRouters = (io, productos) => {
   });
 
   router.get('/realtimeproducts', (req, res) => {
-    res.render('index', { productos });
+    res.render('realtimeproducts', { productos });
   });
 
   return router;
