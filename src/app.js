@@ -29,7 +29,7 @@ async function loadProductos() {
 loadProductos();
 
 app.engine('handlebars', exphbs.engine);
-app.set('views', path.join(__dirname, 'src', 'views'));
+app.set('views', path.join(__dirname, './views'));
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
