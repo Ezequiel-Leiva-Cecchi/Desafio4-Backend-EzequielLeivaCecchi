@@ -4,7 +4,6 @@ import { Server } from 'socket.io';
 import exphbs from 'express-handlebars';
 import path from 'path';
 import fs from 'fs/promises';
-
 import viewsRouters from './routes/views.routes.js';
 
 const __filename = new URL(import.meta.url).pathname;
@@ -25,11 +24,10 @@ async function loadProductos() {
   }
 }
 
-
 loadProductos();
 
-app.engine('handlebars', exphbs.engine);
-app.set('views', path.join(__dirname, './views'));
+app.engine('handlebars', exphbs.engine({ layoutsDir: path.resolve('views', 'layout'), defaultLayout: 'main' }));
+app.set('views', path.join('views'));
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
@@ -38,7 +36,6 @@ app.use(express.urlencoded({ extended: true }));
 
 io.on('connection', (socket) => {
   console.log('Usuario conectado');
-
 
   socket.on('agregarProducto', (producto) => {
     productos.push(producto);
