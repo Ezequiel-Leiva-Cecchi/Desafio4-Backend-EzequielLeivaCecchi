@@ -26,7 +26,7 @@ async function loadProductos() {
 
 loadProductos();
 
-app.engine('handlebars', exphbs.engine({ layoutsDir: path.resolve('views', 'layout'), defaultLayout: 'main' }));
+app.engine('handlebars', exphbs.engine());
 app.set('views', path.join('views'));
 app.set('view engine', 'handlebars');
 
