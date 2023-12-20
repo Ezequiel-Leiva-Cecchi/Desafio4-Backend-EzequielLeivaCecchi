@@ -2,12 +2,13 @@
 
 <ul id="productos-lista">
     {{#each productos}}
-        <li>
-            <strong>{{title}}</strong>
-            <p>{{description}}</p>
-            <p>Precio: ${{price}}</p>
-            <p>Stock: {{stock}}</p>
-        </li>
+    <li>
+        <strong>{{title}}</strong>
+        <p>{{description}}</p>
+        <p>Precio: ${{price}}</p>
+        <p>Stock: {{stock}}</p>
+        <button class="eliminar-producto" data-indice="{{@index}}">Eliminar</button>
+    </li>
     {{/each}}
 </ul>
 
@@ -25,5 +26,9 @@
     <label for="stock">Stock:</label>
     <input type="number" id="stock" name="stock" required>
 
-    <button type="submit">Agregar Producto</button>
+    <button id="btnAgregarProducto">Agregar Producto</button>
 </form>
+
+<link rel="stylesheet" type="text/css" href="/css/realtimeproducts.css">
+<script src="/js/realtimeproducts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>

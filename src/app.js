@@ -1,3 +1,4 @@
+// app.js
 // Importación de módulos
 import express from 'express';
 import http from 'http';
@@ -24,7 +25,6 @@ async function loadProductos() {
   try {
     const data = await fs.readFile('./src/data/productos.json', 'utf8');
     productos = JSON.parse(data);
-    console.log(productos)
     return productos;
     
   } catch (error) {
@@ -34,7 +34,6 @@ async function loadProductos() {
 
 // Cargar productos al iniciar el servidor
 await loadProductos();
-
 
 // Configuración del motor de plantillas Handlebars para Express
 app.engine('handlebars', exphbs.engine());

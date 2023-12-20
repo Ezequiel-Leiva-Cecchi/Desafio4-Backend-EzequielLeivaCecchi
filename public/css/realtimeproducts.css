@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  #productos-lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  #productos-lista li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    overflow: hidden; /* Evitar problemas de estilo con los botones de eliminar */
+  }
+  
+  #productos-lista li strong {
+    color: #333;
+  }
+  
+  #productos-lista li form {
+    float: right; /* Alinea los botones de eliminar a la derecha */
+  }
+  
+  #productos-lista li button {
+    background-color: #ff4d4d; /* Rojo */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #productos-lista li button:hover {
+    background-color: #ff3333; /* Rojo más oscuro al pasar el ratón */
+  }
+  
+  #formulario-producto {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #formulario-producto h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input,
+  textarea,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  button#btnAgregarProducto {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .mensaje-notificacion {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+}
