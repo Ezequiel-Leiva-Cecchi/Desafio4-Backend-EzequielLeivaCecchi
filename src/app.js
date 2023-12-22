@@ -1,4 +1,3 @@
-// app.js
 // Importación de módulos
 import express from 'express';
 import http from 'http';

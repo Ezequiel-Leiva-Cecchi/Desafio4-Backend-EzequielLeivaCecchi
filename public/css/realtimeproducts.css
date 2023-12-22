@@ -22,7 +22,7 @@ body {
     margin-bottom: 10px;
     padding: 10px;
     background-color: #fff;
-    overflow: hidden; /* Evitar problemas de estilo con los botones de eliminar */
+    overflow: hidden; 
   }
   
   #productos-lista li strong {
@@ -30,11 +30,11 @@ body {
   }
   
   #productos-lista li form {
-    float: right; /* Alinea los botones de eliminar a la derecha */
+    float: right; 
   }
   
   #productos-lista li button {
-    background-color: #ff4d4d; /* Rojo */
+    background-color: #ff4d4d; 
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -42,7 +42,7 @@ body {
   }
   
   #productos-lista li button:hover {
-    background-color: #ff3333; /* Rojo más oscuro al pasar el ratón */
+    background-color: #ff3333; 
   }
   
   #formulario-producto {
